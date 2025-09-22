@@ -1,28 +1,17 @@
-provider "aws" {
-  region = var.region
+resource "null_resource" "example" {
+  provisioner "local-exec" {
+    command = "echo This command will execute example whenever the configuration changes"
+  }
 }
 
-data "aws_ami" "ubuntu" {
-  most_recent = true
-
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+resource "null_resource" "¸" {
+  provisioner "local-exec" {
+    command = "echo This command will execute example2 whenever the configuration changes"
   }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-
-  owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "ubuntu" {
-  ami                    = data.aws_ami.ubuntu.id
-  instance_type          = var.instance_type
-
-  tags = {
-    Name = var.instance_name
+resource "null_resource" "example3" {
+  provisioner "local-exec" {
+    command = "echo This command will execute example3 whenever the configuration changes"
   }
 }
