@@ -1,9 +1,9 @@
-policy "test-policy-1" {
+policy "test" {
     source="./module/test.sentinel"
     enforcement_level = "advisory"
 }
 
-policy "test-policy-2" {
+policy "test2" {
     source="./module/test2.sentinel"
-    enforcement_level = "mandatory"
+    enforcement_level = "hard-mandatory"
 }
