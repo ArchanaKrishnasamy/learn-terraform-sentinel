@@ -4,7 +4,7 @@ resource "null_resource" "example" {
   }
 }
 
-resource "null_resource" "¸" {
+resource "null_resource" "example2" {
   provisioner "local-exec" {
     command = "echo This command will execute example2 whenever the configuration changes"
   }
